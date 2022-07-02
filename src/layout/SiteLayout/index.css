@@ -1,0 +1,87 @@
+.header-section{
+  background: url('../../../public/header.svg');
+  height:50px;
+  width: 100vw;
+  display: flex;
+}
+
+.user-icon{
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background: url('../../../public/user.png');
+  background-size: cover;
+}
+
+.user-auth{
+  float: left;
+  height: 100%;
+}
+
+.dropdown{
+  float: left;
+  display: flex;
+  margin: 5px;
+}
+
+.auth-field{
+  text-align: left;
+  align-self: center;
+  width: 100vw;
+  margin: auto;
+  display: flex;
+}
+
+.auth-field button{
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+
+
+.dropdown-content{
+  
+  position: absolute;
+  margin-top: 47px;
+  z-index: 100;
+  transition: 0.3s;
+  border-radius: 3px;
+  border: 1px solid gray;
+  /* From https://css.glass */
+background: rgba(26, 12, 64, 0.59);
+
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.5px);
+-webkit-backdrop-filter: blur(4.5px);
+border: 1px solid rgba(26, 12, 64, 0.44);
+}
+
+.dropdown-content a{
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial;
+  font-weight: bold;
+  padding: 8px 30px 8px 8px;
+  display: block;
+  text-align: left;
+}
+
+.user-name{
+  color: #fff;
+  display: flex;
+  float: left;
+  margin-top: 10px;
+}
+
+.footer{
+  width: 100vw;
+  height: 50px;
+  text-align: center;
+  padding-top: 24px;
+  background: purple;
+  position: relative;
+  margin-top: 80px;
+  font-size: 20px;
+}

@@ -1,0 +1,70 @@
+.headerSection{
+  background:navy;
+  height:50px;
+  width: 100vw;
+}
+
+.userIcon{
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background: url('../../../public/user.png');
+  background-size: cover;
+}
+
+.userAuth{
+  float: left;
+  height: 100%;
+}
+
+.dropdown{
+  float: left;
+  display: flex;
+  margin: 5px;
+}
+
+
+
+.dropdownContent{
+  
+  position: absolute;
+  margin-top: 47px;
+  z-index: 100;
+  transition: 0.3s;
+  border-radius: 3px;
+  border: 1px solid gray;
+  /* From https://css.glass */
+background: rgba(26, 12, 64, 0.59);
+
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.5px);
+-webkit-backdrop-filter: blur(4.5px);
+border: 1px solid rgba(26, 12, 64, 0.44);
+}
+
+.dropdownContent a{
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial;
+  font-weight: bold;
+  padding: 8px 30px 8px 8px;
+  display: block;
+  text-align: left;
+}
+
+.userName{
+  color: #fff;
+  display: flex;
+  float: left;
+  margin-top: 10px;
+}
+
+.footer{
+  width: 100vw;
+  height: 100px;
+  text-align: center;
+  padding-top: 48px;
+  background: blue;
+  position: relative;
+  bottom:0px;
+}
