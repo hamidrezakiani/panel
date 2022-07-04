@@ -20,6 +20,15 @@ const LoginModal = () => {
       var user = response.data.data
       dispatch(login(user))
       dispatch(loginModalToggle())
+      localStorage.setItem('user',JSON.stringify({
+        name: user.firstName + ' ' + user.lastName,
+        api_token: user.api_token,
+        avatar: user.avatar,
+        wallet: user.wallet,
+        role: user.role,
+        status: user.status,
+        verify: user.verify,
+      }))
     }).catch((response) => {
      // console.log(response)
     })

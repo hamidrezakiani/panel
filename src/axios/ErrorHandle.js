@@ -34,6 +34,7 @@ class ErrorHandle {
     if(!site.loginModal)
       store.dispatch(loginModalToggle())
     store.dispatch(logout()) 
+    localStorage.removeItem('user')
   }
 }
 

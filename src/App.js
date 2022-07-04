@@ -20,6 +20,7 @@ import AxiosApi from './axios/AxiosApi'
 
 function App() {
   const { auth } = useSelector(state => state.auth)
+  console.log(auth)
   return (
       <div className="App">
         <HashRouter>
@@ -27,7 +28,12 @@ function App() {
             <Routes>
               <Route
                 path="admin/*"
-                element={<AdminLayout />}
+                element={
+                (auth.check
+                  &&auth.user.role == 'OWNER')?(
+                  <AdminLayout />):(
+                  <Navigate to="/home" replace />)
+                }
               />
               <Route
                 path="*"

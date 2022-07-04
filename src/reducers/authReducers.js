@@ -1,7 +1,7 @@
 const initialState = {
   auth :{
     check: Boolean(localStorage.getItem('user')),
-    user:localStorage.getItem('user'),
+    user:JSON.parse(localStorage.getItem('user')),
   }
 }
 
@@ -21,7 +21,6 @@ export default function(state = initialState, action) {
       return {
         auth: {
           check: false,
-          api_token:null,
           user:null,
         }
       }

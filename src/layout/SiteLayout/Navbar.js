@@ -26,7 +26,8 @@ const Navbar = () => {
                 </span>
                 {site.userDropdown ? (
                    <div className="dropdown-content">
-                     <Link to="/admin/dashboard">admin panel</Link>
+                     {auth.user.role == 'OWNER' ? <Link to="/admin/dashboard">
+                     admin panel</Link>:null}
                      <Link to="/dashboard">dashboard</Link>
                      <Link to="/orders">orders</Link>
                      <Link to="/profile">profile</Link>
@@ -41,6 +42,7 @@ const Navbar = () => {
                        () => {
                          dispatch(logout())
                          dispatch(userDropdownToggle())
+                         localStorage.removeItem('user')
                        }
                      }>sign out</Link>
                    </div> ) : null }

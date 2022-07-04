@@ -31,7 +31,7 @@ const Navbar = () => {
                      <Link to="/home">site</Link>
                      <Link to="dashboard">dashboard</Link>
                      <Link to="orders">orders</Link>
-                     <Link to="profile">profile</Link>
+                     <Link to="services">services</Link>
                      <Link to="tickets">tickests</Link>
                      <Link to="transactions"
                      onClick={
@@ -43,6 +43,7 @@ const Navbar = () => {
                        () => {
                          dispatch(logout())
                          dispatch(userDropdownToggle())
+                         localStorage.removeItem('user')
                        }
                      }>sign out</Link>
                    </div> ) : null }

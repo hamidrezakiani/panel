@@ -1,14 +1,14 @@
 import React, { Fragment, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Navigate } from 'react-router-dom'
-const Orders = () => {
+const Transactions = () => {
   const dispatch = useDispatch()
   const { auth } = useSelector(state => state.auth)
 
 
   return (
-    <p> this is admin order page </p>  
+    <p> this is transactions page </p>  
   )
 }
 
-export default Orders
+export default Transactions
