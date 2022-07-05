@@ -1,16 +1,18 @@
 import axios from 'axios'
 import ErrorHandle from './ErrorHandle'
 import store from '../store'
-const auth = store.getState().auth.auth
 const instance = axios.create({
   baseURL: 'https://api.iraniad.com/representation',
   headers: {
     'Content-Type': 'application/json',
-    Authorization: 'Bearer ' + (auth.check ? auth.user.api_token : null),
+    //Authorization: 'Bearer ' + (auth.check ? auth.user.api_token : null),
   },
 })
 
 instance.interceptors.request.use(request => {
+    const auth = store.getState().auth.auth
+    const token = 'Bearer ' + (auth.check ? auth.user.api_token : null)
+    request.headers.Authorization = token
     return request
 }, error => {
     return Promise.reject(error)
